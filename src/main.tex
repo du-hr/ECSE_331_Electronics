@@ -120,28 +120,30 @@ In part 2, we observe the behavior of a diode under different temperature condit
   \caption{The i-v measurement for 1N4148 diode at different temperatures}
   \label{fig:9}
 \end{figure}
+\newpage
 \subsection{Part 3: Zener Diodes}
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/zener_circuit.png}
+  \includegraphics[width=0.3\textwidth]{images/zener_circuit.png}
   \caption{Circuit for capturing the i-v characteristic of a 3.3 $V$ Zener diode.}
   \label{fig:zener_1}
 \end{figure}
 Fig. \ref{fig:zener_1} shows the circuit that was applied to conclude the characteristics of
 a Zener diode. A sawtooth input signal and varied amplitude was applied to the circuit. The behavior
 of the Zener diode is shown below in Fig. \ref{fig:zener_2} and Fig. \ref{fig:zener_3}.
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/zener_simu.png}
+  \includegraphics[width=0.3\textwidth]{images/zener_simu.png}
   \caption{Simulation results of the Zener diode.}
   \label{fig:zener_2}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/zener_iv.png}
+  \includegraphics[width=0.3\textwidth]{images/zener_iv.png}
   \caption{I-V curve of the Zener diode.}
   \label{fig:zener_3}
 \end{figure}
+\clearpage
 This I-V curve clearly shows that the Zener diode is operating in the breakdown region.
 The Zener diode starts conducting large current when the voltage across it is below
 a certain value, in this case that seems to be around -7.5 $V$.
@@ -153,46 +155,48 @@ This part of the lab focused on the rectifying of diodes. The circuit
 shown in Fig. \ref{fig:rectifier_1} was configured.
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/rectifier_circuit.png}
+  \includegraphics[width=0.5\textwidth]{images/rectifier_circuit.png}
   \caption{Half-wave rectifier circuit.}
   \label{fig:rectifier_1}
 \end{figure}
 \par In a half-wave rectifier circuit, only the signal in the positive domain of
 the wave is allowed to pass. In the experiment, the input signal is 60 Hz sine wave
 with 5 $V$ amplitude. The simulation result is shown below in Fig. \ref{fig:rectifier_2}.
-\begin{figure}[!hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/halfwave.png}
+  \includegraphics[width=0.4\textwidth]{images/halfwave.png}
   \caption{Simulation of the half-wave-rectifier}
   \label{fig:rectifier_2}
 \end{figure}
 \par It can be observed that only half the wave is going through the load and the diode
 triggers the voltage drop.
-\begin{figure}[!hb]
+\newpage
+\par For the circuit with capacitor in Fig. \ref{fig:rectifier_3}, a 1 $\mu$F
+capacitor was placed in parallel with the load resistor.
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/rectifier_circuit_2.png}
+  \includegraphics[width=0.5\textwidth]{images/rectifier_circuit_2.png}
   \caption{Circuit diagram of the rectifier with a 1 $\mu$F capacitor.}
   \label{fig:rectifier_3}
 \end{figure}
-\par For the circuit with capacitor in Fig. \ref{fig:rectifier_3}, a 1 $\mu$F
-capacitor was placed in parallel with the load resistor.
-\begin{figure}[!hb]
+\par The simulation result in Fig. \ref{fig:rectifier_4} shows that since the
+capacitance is too small, it discharges very quickly.
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/halfwave_1miuf.png}
+  \includegraphics[width=0.35\textwidth]{images/halfwave_1miuf.png}
   \caption{Simulation of the rectifier with a 1 $\mu$F capacitor.}
   \label{fig:rectifier_4}
 \end{figure}
-\par The simulation result in Fig. \ref{fig:rectifier_4} shows that since the
-capacitance is too small, it discharges very quickly.
 \par When the capacitance is increased to 100 $\mu$F, which decreases the time
 constant and increases the discharging time, the output amplitude shows the appearance
 similar to a DC voltage. Fig. \ref{fig:rectifier_5} shows such behavior in the simulation.
-\begin{figure}[!hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/halfwave_100miuf.png}
+  \includegraphics[width=0.35\textwidth]{images/halfwave_100miuf.png}
   \caption{Simulation of the rectifier with a 100 $\mu$F capacitor.}
   \label{fig:rectifier_5}
 \end{figure}
+\clearpage
 \par For the half-rectifier with 100 $\mu$F capacitor, the peak amplitude of
 the output function decreases to around 0.46 $V$. Given by $V_{p-p}$ = $\frac {1}{f \cdot C}$
 , using this formula, we obtained a ripple frequency of 240 kHz when a 1 $\mu$F
@@ -200,7 +204,7 @@ capacitor is used and 22 kHz when a 100 $\mu$F capacitor is applied.
 \subsection{Part 5: Voltage Regulation Using Zener Diode}
 \begin{figure}[!hb]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/5_1.png}
+  \includegraphics[width=0.5\textwidth]{images/5_1.png}
   \caption{circuit diagram of the rectifier with a voltage divider at its output.}
   \label{fig:5.1}
 \end{figure}
