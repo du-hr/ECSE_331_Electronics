@@ -217,28 +217,29 @@ $\Omega$ resistor in parallel which would have an equivalent resistance of
 and in series with Two 100 $\Omega$ in series which is in series of two 100
 $\Omega$ resistor in parallel, in such a way we have $R_{2}$ = 750 $\Omega$.
 \par The output voltage is measured in Fig. \ref{fig:5.2}.
-\begin{figure}[!hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/5_2.png}
+  \includegraphics[width=0.45\textwidth]{images/5_2.png}
   \caption{output voltage with voltage divider (input is grey and output is in black)}
   \label{fig:5.2}
 \end{figure}
 \par The average output voltage is at 3.3V.
 The ripple is similar to the one in part IV, however, its amplitude has been divided,
 which makes this approach to have the smallest AC ripple.
+\newpage
 \par We modified the circuit furthermore, by adding a zener diode in
 series with $R_{2}$ and replace the oscilloscope to the node where the Zener diode
 and $R_{2}$ attached as shown in Fig. \ref{fig:5.3}.
-\begin{figure}[!hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/5_3.png}
+  \includegraphics[width=0.5\textwidth]{images/5_3.png}
   \caption{circuit diagram of the rectifier with a regulating Zener diode}
   \label{fig:5.3}
 \end{figure}
 \par The output measurement and the input measurement is as shown below in Fig. \ref{fig:5.4}.
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/5_4.png}
+  \includegraphics[width=0.5\textwidth]{images/5_4.png}
   \caption{output voltage signal with a regulating zener diode}
   \label{fig:5.4}
 \end{figure}
@@ -246,10 +247,11 @@ and $R_{2}$ attached as shown in Fig. \ref{fig:5.3}.
 is smooth and have now visually detectable ripples. This circuit obviously
 provides the least AC ripple among every other method we have tried previously
 (including the resistor divider format).
+\clearpage
 \subsection{Part 6: Limiter Circuit Using Diodes}
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/6_1.png}
+  \includegraphics[width=0.5\textwidth]{images/6_1.png}
   \caption{circuit diagram of the voltage limiter with 1.5 $V$ cell attached}
   \label{fig:6.1}
 \end{figure}
@@ -259,7 +261,7 @@ The $V_{x}$ and $V_{y}$ is measured by using oscilloscope A and B. The result is
 as shown in Fig. \ref{fig:6.2} below where $V_{x}$ is in grey and $V_{y}$ is in black.
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/6_2.png}
+  \includegraphics[width=0.35\textwidth]{images/6_2.png}
   \caption{$V_{x}$ and $V_{y}$ signal measured with 1.5 $V$ cell battery in the circuit}
   \label{fig:6.2}
 \end{figure}
@@ -268,7 +270,7 @@ as shown in Fig. \ref{fig:6.2} below where $V_{x}$ is in grey and $V_{y}$ is in 
 headed diode in parallel with existing diode in the circuit as shown in  Fig. \ref{fig:6.3}.
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/6_3.png}
+  \includegraphics[width=0.35\textwidth]{images/6_3.png}
   \caption{circuit diagram with reverse direction diodes}
   \label{fig:6.3}
 \end{figure}
@@ -277,7 +279,7 @@ headed diode in parallel with existing diode in the circuit as shown in  Fig. \r
 is as shown below in Fig. \ref{fig:6.4}.
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/6_4.png}
+  \includegraphics[width=0.5\textwidth]{images/6_4.png}
   \caption{$V_{x}$ and $V_{y}$ signal with reverse direction diodes}
   \label{fig:6.4}
 \end{figure}
@@ -286,7 +288,6 @@ small signal applications, since the reversed direction diode can limited voltag
 signal in both too high and too low, because if the nature of the diode too high
 reversed bias would cause reverse breakdown, thus this kind of circuit does not
 capable high voltage application.
-\clearpage
 \section{CONCLUSIONS}
 \par To conclude, in this lab, various Op-Amp circuits were built and their behaviors were observed.
 We saw in this lab that an op-amp contrary to its ideal model has an offset voltage,
