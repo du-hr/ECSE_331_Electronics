@@ -53,7 +53,6 @@ Engineering, Faculty of Engineering, McGill University, Montreal, QC H3A 0E9 Can
     Silicon diodes are two-terminal devices that are composed of the p-n conjunction. They are used for rectification. Standard diodes allow current in only one direction and do not conduct in reverse bias. However, zener diodes can operate in reverse-breakdown. This lab explores the properties of different diodes. We use an operational amplifier to keep track both the voltage across and the current through the diode under test.
 \par In this report, we will present the result we obtained during the experiment and analysis them using knowlegde we learned from class.
     \section{EXPERIMENTS PROCEDURES AND RESULT}
-
     \subsection{Part 1: I-V Charactersitcs Using a Curve Tracer}
 	\begin{figure}[h]
         \centering
@@ -118,29 +117,192 @@ Engineering, Faculty of Engineering, McGill University, Montreal, QC H3A 0E9 Can
         \caption{The i-v measurement for 1N4148 diode at different tempertures}
 		\label{fig:9}
     \end{figure}
+\subsection{Part 3: Zener Diodes}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/zener_circuit.png}
+  \caption{Circuit for capturing the i-v characteristic of a 3.3 $V$ Zener diode.}
+  \label{fig:zener_1}
+\end{figure}
+Fig. \ref{fig:zener_1} shows the circuit that was applied to conclude the characteristics of
+a Zener diode. A sawtooth input signal and varied amplitude was applied to the circuit. The behavior
+of the Zener diode is shown below in Fig. \ref{fig:zener_2} and Fig. \ref{fig:zener_3}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/zener_simu.png}
+  \caption{Simulation results of the Zener diode.}
+  \label{fig:zener_2}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/zener_iv.png}
+  \caption{I-V curve of the Zener diode.}
+  \label{fig:zener_3}
+\end{figure}
+This I-V curve clearly shows that the Zener diode is operating in the breakdown region.
+The Zener diode starts conducting large current when the voltage across it is below
+a certain value, in this case that seems to be around -7.5 $V$.
+Thus, the Zener diode breakdown happens around a voltage of -7.5 $V$.
+\par The AC resistance inside the breakdown region is $\frac{1}{slope}$ of the breakdown region,
+estimated from the graph to be about 15.3 $\Omega$.
+\subsection{Part 4: Rectifiers}
+This part of the lab focused on the rectifying of diodes. The circuit
+shown in Fig. \ref{fig:rectifier_1} was configured.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/rectifier_circuit.png}
+  \caption{Half-wave rectifier circuit.}
+  \label{fig:rectifier_1}
+\end{figure}
+\par In a half-wave rectifier circuit, only the signal in the positive domain of
+the wave is allowed to pass. In the experiment, the input signal is 60 Hz sine wave
+with 5 $V$ amplitude. The simulation result is shown below in Fig. \ref{fig:rectifier_2}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/halfwave.png}
+  \caption{Simulation of the half-wave-rectifier}
+  \label{fig:rectifier_2}
+\end{figure}
+\par It can be observed that only half the wave is going through the load and the diode
+triggers the voltage drop.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/rectifier_circuit_2.png}
+  \caption{Circuit diagram of the rectifier with a 1 $\mu$F capacitor.}
+  \label{fig:rectifier_3}
+\end{figure}
+\par For the circuit with capacitor in Fig. \ref{fig:rectifier_3}, a 1 $\mu$F
+capacitor was placed in parallel with the load resistor.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/halfwave_1miuf.png}
+  \caption{Simulation of the rectifier with a 1 $\mu$F capacitor.}
+  \label{fig:rectifier_4}
+\end{figure}
+\par The simulation result in Fig. \ref{fig:rectifier_4} shows that since the
+capacitance is too small, it discharges very quickly.
+\par When the capacitance is increased to 100 $\mu$F, which decreases the time
+constant and increases the discharging time, the output amplitude shows the appearance
+similar to a DC voltage. Fig. \ref{fig:rectifier_5} shows such behavior in the simulation.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/halfwave_100miuf.png}
+  \caption{Simulation of the rectifier with a 100 $\mu$F capacitor.}
+  \label{fig:rectifier_5}
+\end{figure}
+\par For the half-rectifier with 100 $\mu$F capacitor, the peak amplitude of
+the output function decreases to around 0.46 $V$. Given by $V_{p-p}$ = $\frac {1}{f \cdot C}$
+, using this formula, we obtained a ripple frequency of 240 kHz when a 1 $\mu$F
+capacitor is used and 22 kHz when a 100 $\mu$F capacitor is applied.
+\subsection{Part 5: Voltage Regulation Using Zener Diode}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/5_1.png}
+  \caption{circuit diagram of the rectifier with a voltage divider at its output.}
+  \label{fig:5.1}
+\end{figure}
+By using the basic format structure of the circuit from the previous section,
+we replaced the 1 k$\Omega$ resistor to $R_{1}$ and attaching an addition
+$R_{2}$ in series with $R_{1}$ to form a voltage divider (see Fig. \ref{fig:5.1}).
+We constructed $R_{1}$ as two 100 $\Omega$ resistors in series with two 100
+$\Omega$ resistor in parallel which would have an equivalent resistance of
+250 $\Omega$, on the other hand we used two 1 k$\Omega$ resistors in parallel
+and in series with Two 100 $\Omega$ in series which is in series of two 100
+$\Omega$ resistor in parallel, in such a way we have $R_{2}$ = 750 $\Omega$.
+\par The output voltage is measured in Fig. \ref{fig:5.2}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/5_2.png}
+  \caption{output voltage with voltage divider (input is grey and output is in black)}
+  \label{fig:5.2}
+\end{figure}
+\par The average output voltage is at 3.3V.
+The ripple is similar to the one in part IV, however, its amplitude has been divided,
+which makes this approach to have the smallest AC ripple.
+\par We modified the circuit furthermore, by adding a zener diode in
+series with $R_{2}$ and replace the oscilloscope to the node where the Zener diode
+and $R_{2}$ attached as shown in Fig. \ref{fig:5.3}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/5_3.png}
+  \caption{circuit diagram of the rectifier with a regulating Zener diode}
+  \label{fig:5.3}
+\end{figure}
+\par The output measurement and the input measurement is as shown below in Fig. \ref{fig:5.4}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/5_4.png}
+  \caption{output voltage signal with a regulating zener diode}
+  \label{fig:5.4}
+\end{figure}
+\par The average output signal is at around 2.3 $V$, however the signal itself
+is smooth and have now visually detectable ripples. This circuit obviously
+provides the least AC ripple among every other method we have tried previously
+(including the resistor divider format).
+\subsection{Part 6: Limiter Circuit Using Diodes}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/6_1.png}
+  \caption{circuit diagram of the voltage limiter with 1.5 $V$ cell attached}
+  \label{fig:6.1}
+\end{figure}
+We constructed the circuit as in Fig. \ref{fig:6.1} suggested, in which
+this circuit is induced by using a signal with $V_{p-p} = 5 V$ and 0.5 $V$ DC offset.
+The $V_{x}$ and $V_{y}$ is measured by using oscilloscope A and B. The result is
+as shown in Fig. \ref{fig:6.2} below where $V_{x}$ is in grey and $V_{y}$ is in black.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/6_2.png}
+  \caption{$V_{x}$ and $V_{y}$ signal measured with 1.5 $V$ cell battery in the circuit}
+  \label{fig:6.2}
+\end{figure}
+\par We can see that after the as the input is passing 2 $V$, the battery-diode arrangement will turn on.
+\par Now we remove the 1.5 $V$ battery pack and replacing it with an opposite
+headed diode in parallel with existing diode in the circuit as shown in  Fig. \ref{fig:6.3}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/6_3.png}
+  \caption{circuit diagram with reverse direction diodes}
+  \label{fig:6.3}
+\end{figure}
+\par We re-adjust the input signal by using the function generator to generate a
+4 $V$ peak to peak and 0 $V$ DC offset signal. The measured $V_{x}$ and $V_{y}$
+is as shown below in Fig. \ref{fig:6.4}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/6_4.png}
+  \caption{$V_{x}$ and $V_{y}$ signal with reverse direction diodes}
+  \label{fig:6.4}
+\end{figure}
+\par This kind of circuit arrangement can be used in noise cancellation and
+small signal applications, since the reversed direction diode can limited voltage
+signal in both too high and too low, because if the nature of the diode too high
+reversed bias would cause reverse breakdown, thus this kind of circuit does not
+capable high voltage application.
+\section{CONCLUSIONS}
+\par To conclude, in this lab, various Op-Amp circuits were built and their behaviors were observed.
+We saw in this lab that an op-amp contrary to its ideal model has an offset voltage,
+and small currents entering its inputs. So we found experimentally that op-amps have biased input currents and offset currents.
+\par In this lab, the experiments also showed that the gain of amplifiers is dependent on frequency. It was also observed that if the input is frequency is too high, the output will be disturbed and distorted.
+
+% DO NOT NEED FROM HERE
+%  \addtolength{\textheight}{-12cm}
+% This command serves to balance the column lengths
+% on the last page of the document manually. It shortens
+% the textheight of the last page by a suitable amount.
+% This command does not take effect until the next page
+% so it should come on the page before the last. Make
+% sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-    \section{CONCLUSIONS}
-    start here.
 
-    % DO NOT NEED FROM HERE
-    %  \addtolength{\textheight}{-12cm}
-    % This command serves to balance the column lengths
-    % on the last page of the document manually. It shortens
-    % the textheight of the last page by a suitable amount.
-    % This command does not take effect until the next page
-    % so it should come on the page before the last. Make
-    % sure that you do not shorten the textheight too much.
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %    \section*{APPENDIX}
 %
