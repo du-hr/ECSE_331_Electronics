@@ -51,54 +51,56 @@ Engineering, Faculty of Engineering, McGill University, Montreal, QC H3A 0E9 Can
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
 Silicon diodes are two-terminal devices that are composed of the p-n conjunction. They are used for rectification. Standard diodes allow current in only one direction and do not conduct in reverse bias. However, zener diodes can operate in reverse-breakdown. This lab explores the properties of different diodes. We use an operational amplifier to keep track both the voltage across and the current through the diode under test.
-\par In this report, we will present the result we obtained during the experiment and analysis them using knowlegde we learned from class.
+\par In this report, we will present the result we obtained during the experiment and analysis them using knowledge we learned from class.
 \section{EXPERIMENTS PROCEDURES AND RESULT}
 \subsection{Part 1: I-V Characteristics Using a Curve Tracer}
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/Part1circuit.png}
+  \includegraphics[width=0.5\textwidth]{images/Part1circuit.png}
   \caption{Circuit for i-v diode measurement in Part 1}
   \label{fig:1}
 \end{figure}
-\par In the first part of the lab, before we construct the above circuit shown in Fig. \ref{fig:1} using the 1N4148 signal diode. We first verify that the voltage shown in scope B is 10 times greater than the current iD by replacing the diode with a 100 ohm resistor. The input signal is a triangle wave with 4 volt peak to peak voltage and zero offset. The experiment result is shown in Fig. \ref{fig:2}; the black one is Va and the grey one is Vb.Vb has an amplitude of 1.2645V (2.529 V peak-to-peak) and Va has an amplitude of 129.305 mV (258.61 mV peak-to-peak); by ohm's law the amplitude of the current through the resistor is 12.645  mA, which is about 10 times less than Vb. Thus, the circuit works properly.
-\begin{figure}[ht]
+\par In the first part of the lab, before we construct the above circuit shown in Fig. \ref{fig:1} using the 1N4148 signal diode. We first verify that the voltage shown in scope B is 10 times greater than the current $i_{D}$ by replacing the diode with a 100 $\Omega$ resistor. The input signal is a triangle wave with 4 $V$ peak to peak voltage and zero offset. The experiment result is shown in Fig. \ref{fig:2}; the black one is $V_{a}$ and the grey one is $V_{b}$. $V_{b}$ has an amplitude of 1.2645 $V$ and $V_{a}$ has an amplitude of 129.305 $mV$ (258.61 $mV$ peak-to-peak); by Ohm's law the amplitude of the current through the resistor is 12.645  $mA$, which is about 10 times less than $V_{b}$. Thus, the circuit works properly.
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result1.png}
+  \includegraphics[width=0.32\textwidth]{images/result1.png}
   \caption{Result for testing the op-amp; black is Va and grey is Vb}
   \label{fig:2}
 \end{figure}
 \par Next, we replace the resistor with the 1N4148 signal diode, while keep the input signal the same as before. Fig. \ref{fig:3} shows the simulation and the experiment result.
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result2.png}
+  \includegraphics[width=0.32\textwidth]{images/result2.png}
   \caption{Simulation result of the 1N4148 diode; black is Va and grey is Vb}
   \label{fig:3}
 \end{figure}
-\par This simulation diagram by itself is not very valuable and nothing can really be generated of from this form; therefore, we plot the i-v diagram of this diode, and the result is shown below in Fig. \ref{fig:4}. By observing the graph, we find that the cut-in voltage is 0.5 V. Also, by using the formula slope = deltaI/deltaV, and the two pairs of data points (circled in red) from the i-v diagram in Fig. \ref{fig:5}, we calculate the slope at 0.7 V is 123.55 mA/V.
-\begin{figure}[ht]
+\clearpage
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result3.png}
+  \includegraphics[width=0.4\textwidth]{images/result3.png}
   \caption{The i-v curve of the 1N4148 diode}
   \label{fig:4}
 \end{figure}
-\begin{figure}[ht]
+\par This simulation diagram by itself is not very valuable and nothing can really be generated of from this form; therefore, we plot the i-v diagram of this diode, and the result is shown above in Fig. \ref{fig:4}. By observing the graph, we find that the cut-in voltage is 0.5 V. Also, by using the formula slope = deltaI/deltaV, and the two pairs of data points (circled in red) from the i-v diagram in Fig. \ref{fig:5}, we calculate the slope at 0.7 V is 123.55 mA/V.
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result4.png}
+  \includegraphics[width=0.3\textwidth]{images/result4.png}
   \caption{The data points from i-v curve of the 1N4148 diode; the first column represents the voltage in V; the second column represents the current in mA}
   \label{fig:5}
 \end{figure}
 \par The maximum voltage difference between the actual i-v curve and that predicted by the piecewise linear model over a voltage range from -2 to +2 V is very small (0.1V). The piecewise linear approximation is a reliable model.
 \par Then, we replace the 1N4148 signal diode with an 1N4005 diode, Fig. \ref{fig:6} shows the simulation and the experiment results. The results are similar.
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.5\textwidth]{images/result5.png}
   \caption{Comparision of the i-v curves for 1N4005 diode and 1N4148 diode}
   \label{fig:6}
 \end{figure}
+\newpage
 \par Finally, we reverse the 1N4148 diode, we observe that the behavior is also reversed because the triangle wave is symmetric with respect to 0 V. Fig. \ref{fig:7} shows the i-v curve of the reversed 1N4148 diode.
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result6.png}
+  \includegraphics[width=0.5\textwidth]{images/result6.png}
   \caption{The i-v curve of the reversed 1N4148 diode}
   \label{fig:7}
 \end{figure}
@@ -106,7 +108,7 @@ Silicon diodes are two-terminal devices that are composed of the p-n conjunction
 \subsection{Part 2: Diode Temperature Effect}
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/Part1circuit.png}
+  \includegraphics[width=0.5\textwidth]{images/Part1circuit.png}
   \caption{Circuit for i-v diode measurement in Part 1}
   \label{fig:8}
 \end{figure}
@@ -114,7 +116,7 @@ In part 2, we observe the behavior of a diode under different temperature condit
 \par By observing the results from in Fig. \ref{fig:9}, we find that the increase in the temperature will lower the cut in voltage of the diode. This is expected because as the overall energy in the electrons of semi-conductors increases, the amount of extra energy need to be provided to make the diode conduct decreases.\newline
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.25\textwidth]{images/result7.png}
+  \includegraphics[width=0.5\textwidth]{images/result7.png}
   \caption{The i-v measurement for 1N4148 diode at different temperatures}
   \label{fig:9}
 \end{figure}
