@@ -97,8 +97,34 @@ Engineering, Faculty of Engineering, McGill University, Montreal, QC H3A 0E9 Can
     Start here.\newline
     example: $x_{1}+x^{'} = \sum_{i=1}^N{K^{2}+1}$
     \subsection{Part 3: Zender Diodes}
-    Start here.
-    \subsection{Part 4; Rectifiers}
+    \begin{figure}[h]
+      \centering
+        \includegraphics[width=0.25\textwidth]{images/zener_circuit.png}
+      \caption{Circuit for capturing the i-v characteristic of a 3.3 V Zener diode.}
+      \label{fig:zener_1}
+    \end{figure}
+    Fig. \ref{fig:zener_1} shows the circuit that was applied to conclude the characteristics of
+    a Zener diode. A sawtooth input signal and varied amplitude was applied to the circuit. The bahavior
+    of the Zener diode is shown below in Fig. \ref{fig:zener_2} and Fig. \ref{fig:zener_3}.
+    \begin{figure}[h]
+      \centering
+        \includegraphics[width=0.25\textwidth]{images/zener_simu.png}
+      \caption{Simulation results of the Zener diode.}
+      \label{fig:zener_2}
+    \end{figure}
+    \begin{figure}[h]
+      \centering
+        \includegraphics[width=0.25\textwidth]{images/zener_iv.png}
+      \caption{I-V cureve of the Zener diode.}
+      \label{fig:zener_3}
+    \end{figure}
+    This I-V curve clearly shows that the Zener diode is operrating in the breakdown region.
+    The Zener diode starts conducting large current when the voltage acrocss it is below
+    a certain value, in this case that seems to be around -7.5V.
+    Thus, the Zener diode breakdown happens around a voltage of -7.5V.
+    The AC resistance inside the breakdown region is 1/slope of the breakdown region, estimated from
+    the graph to be about 15.3 $\Omega$.
+    \subsection{Part 4: Rectifiers}
     Start here.
     \subsection{Part 5: Voltage Rugualtion Using Zender Diode}
     Start here.
