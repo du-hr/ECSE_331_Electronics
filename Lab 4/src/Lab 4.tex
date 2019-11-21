@@ -1,7 +1,5 @@
 \documentclass[journal]{IEEEtran}
 \usepackage[pdftex]{graphicx}
-\graphicspath{{../pdf/}{../jpeg/}}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \usepackage[cmex10]{amsmath}
 \usepackage{array}
 \usepackage{mdwmath}
@@ -10,7 +8,6 @@
 \usepackage{url}
 \usepackage{pdfpages}
 
-%=== TITLE & AUTHORS ====================================================================
 \begin{document}
 \begin{titlepage}
 \includepdf[page=-]{Cover.pdf}
@@ -29,6 +26,7 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
 (email: haoran.du@mail.mcgill.ca).}}
 
 \maketitle
+
 \begin{abstract}
   The purpose of laboratory experiment was to explore the functions
   and characteristics of MOSFETs and BJTs. In the first part of this laboratory,
@@ -52,6 +50,12 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
  Finally, the effect of temperature on the operation of the transistors was tested.
 \section{Experiments Procedures and Result}
 \subsection{MOSFET $I_{D}-V_{DS}$ Characteristics Using a Curve Tracer}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/1.png}
+  \caption{Circuit digram for I-V characteristic used in part A.}
+  \label{fig-1}
+\end{figure}
 \subsection{MOSFET Temperature Effects}
 \subsection{BJT $I_{C}-V_{CE}$ Characteristics Using a Curve Tracer}
 \subsection{BJT Temperature Effects}
