@@ -129,7 +129,7 @@ we obtained the following data as written in table?.
   \centering
   \includegraphics[width=0.45\textwidth]{images/2-3.png}
   \caption{MOSFET’s $I_{D}$-$V_{y}$ at \SI{47}{\celsius}.}
-  \label{fig-6}
+  \label{fig-7}
 \end{figure}
 \par By comparing the three graphs, we see that for \SI{31}{\celsius} and
 \SI{47}{\celsius}, the values and the graph are very similar. For
@@ -138,8 +138,40 @@ explained by the fact that at lower temperatures, there are less
 free electrons and holes available to conduct current. Similarly,
 as the temperature increases, there would be more thermally generated holes
 and free electrons, which increases its conductivity.
-\subsection{BJT $I_{C}$-$V_{CE}$ Characteristics Using a Curve Tracer}
+\clearpage
+\subsection{BJT $I_{C}$-$V_{CE}$ Characteristics Using a Curve Tracer}\label{sec-3}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/3-1.png}
+  \caption{Circuit diagram to find $I_{C}$-$V_{CE}$ for the BJT.}
+  \label{fig-8}
+\end{figure}
+\par To analyze the behavior of $I$-$V$ characteristic of the BJT, we
+built the circuit in Fig. \ref{fig-8} and plot the curve for different values
+of $V_{\text{in}}$, which is a sawtooth waveform that varies from \SIrange{1}{10}{\volt}.
+\clearpage
 \subsection{BJT Temperature Effects}
+\par As seen in subsection \ref{sec-3}, as we increase the temperature, the
+current for a certain drain voltage increases. In theory, as
+the temperature increases, there are more free holes and
+electrons to carry the charges, thus the $I_{C}$-$V_{CE}$ curve would
+shift up as the temperature increases. We obtained the following results:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/4-1.png}
+  \caption{BJT $V_{DS}$-$V_{Y}$ at \SI{22}{\celsius}.}
+  \label{fig-9}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/4-2.png}
+  \caption{BJT $V_{DS}$-$V_{Y}$ at \SI{45}{\celsius}.}
+  \label{fig-10}
+\end{figure}
+\par By comparing Fig. \ref{fig-9} and Fig \ref{fig-10}, we see that for \SI{22}{\celsius}
+and \SI{45}{\celsius}, at lower temperatures, there are less
+free electrons and holes available to conduct current, which yields to a worse conductivity.
 \section{Conclusion}
-
+\par To conclude, in this lab, the experiments overall confirmed what was learned in class, various circuits were built and the usefulness of the MOSEFT and BJT transistors were demonstrated.
+We saw in this lab that the conductivity of MOSFETs and BJTs are heavily affected by the temperature. Also, for different values of $V_{DS}$, the transistors behave differently. When $V_{DS}$ is more than the overdrive voltage, then its current  $I_{D}$ is saturated.
 \end{document}
