@@ -31,7 +31,7 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
 \begin{abstract}
   The purpose of laboratory experiment was to explore the functions
   and characteristics of MOSFETs and BJTs. In the first part of this laboratory,
-  the I-V characteristics of the MOSFET was found and drawn for different gate voltages,
+  the $I$-$V$ characteristics of the MOSFET was found and drawn for different gate voltages,
   then the transconductance gm of the circuit was found. In the second part,
   the behavior of the MOSFET was studied at various temperatures.
   The same experiment was also conducted on the BJT transistor.
@@ -44,8 +44,8 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
 \section{Introduction}
 
 \IEEEPARstart{T}{he} goal of this laboratory was to test and explore the behavior of
- different transistors by drawing their I-V diagrams using the NI Elvis-II test instrument.
- More specifically, the I-V curve for the MOSFET and BJT transistors were drawn
+ different transistors by drawing their $I$-$V$ diagrams using the NI Elvis-II test instrument.
+ More specifically, the $I$-$V$ curve for the MOSFET and BJT transistors were drawn
  using the data taken with the NI Elvis instrument. A resistor network was designed
  to find the DC operating point of the transistors.
  Finally, the effect of temperature on the operation of the transistors was tested.
@@ -58,7 +58,7 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
   \label{fig-1}
 \end{figure}
 \par The above circuit shown in Fig. \ref{fig-1} was constructed to measure $V_{DS}$ and $I_{D}$
-and trace the I-V curve. This experiment was repeated multiple times with different
+and trace the $I$-$V$ curve. This experiment was repeated multiple times with different
 gate voltages $V_{g}$. A sawtooth waveform going from \SIrange{1}{10}{\volt} was applied.
 \begin{figure}[h]
   \centering
@@ -105,9 +105,39 @@ with the Oscilloscope. Below are some of the results.
 we start to see the behavior of the MOSFETs. When Vin is about to reach than
 \SI{2}{\volt}, which is around the  threshold voltage according to the Manufacturers data sheet,
 $I_{D}$ saturates.
-\par sdfsd.
-
+\clearpage
 \subsection{MOSFET Temperature Effects}
+\par The MOSFET’s $I_{D}$-$V_{DS}$ curve was measured using the circuit in Fig. \ref{fig-1}
+at different temperatures. In theory, the current conducted at a higher temperature
+a fixed $V_{DS}$ will be larger than that at a lower temperature. In the lab, the
+following results are obtained at room temperature.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/2-1.png}
+  \caption{MOSFET’s $I_{D}$-$V_{y}$ at room temperature: \SI{31}{\celsius}.}
+  \label{fig-5}
+\end{figure}
+\par Using the circuit in  Fig. \ref{fig-1} with the MOSFET being at \SI{31}{\celsius},
+we obtained the following data as written in table?.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/2-2.png}
+  \caption{MOSFET’s $I_{D}$-$V_{y}$ at \SI{-18}{\celsius}.}
+  \label{fig-6}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/2-3.png}
+  \caption{MOSFET’s $I_{D}$-$V_{y}$ at \SI{47}{\celsius}.}
+  \label{fig-6}
+\end{figure}
+\par By comparing the three graphs, we see that for \SI{31}{\celsius} and
+\SI{47}{\celsius}, the values and the graph are very similar. For
+\SI{-18}{\celsius}, $I_{D}$ is smaller at the same $V_{DS}$. It could be
+explained by the fact that at lower temperatures, there are less
+free electrons and holes available to conduct current. Similarly,
+as the temperature increases, there would be more thermally generated holes
+and free electrons, which increases its conductivity.
 \subsection{BJT $I_{C}$-$V_{CE}$ Characteristics Using a Curve Tracer}
 \subsection{BJT Temperature Effects}
 \section{Conclusion}
