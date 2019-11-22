@@ -50,17 +50,65 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
  to find the DC operating point of the transistors.
  Finally, the effect of temperature on the operation of the transistors was tested.
 \section{Experiments Procedures and Result}
-\subsection{MOSFET $I_{D}-V_{DS}$ Characteristics Using a Curve Tracer}
-\par \SI{10}{\kilo\hertz}
-\si{\newton\metre\squared\per\kilogram\squared}
+\subsection{MOSFET $I_{D}$-$V_{DS}$ Characteristics Using a Curve Tracer}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.45\textwidth]{images/1.png}
   \caption{Circuit digram for I-V characteristic used in part A.}
   \label{fig-1}
 \end{figure}
+\par The above circuit shown in Fig. \ref{fig-1} was constructed to measure $V_{DS}$ and $I_{D}$
+and trace the I-V curve. This experiment was repeated multiple times with different
+gate voltages $V_{g}$. A sawtooth waveform going from \SIrange{1}{10}{\volt} was applied.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/1-2Vt.png}
+  \caption{$V_{D}$ as a function of $V_{\text{in}}$ when $V_{g}=0$.}
+  \label{fig-2}
+\end{figure}
+\par Next, in the same circuit, the gate voltage $V_{g}$ was increased to
+\SIlist{3.1;3.6;4.1;4.6;5.1}{\volt}. For each case in the \SIrange{1}{5}{\volt}
+gate voltage range, the $I$-$V$ curve was constructed using the data collected
+with the Oscilloscope. Below are some of the results.
+\begin{figure}[h]
+\centering
+\begin{minipage}{.25\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/1-31.png}
+  \caption{$V_{g}=\SI{3.1}{\volt}$.}
+\end{minipage}%
+\begin{minipage}{.25\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/1-36.png}
+  \caption{$V_{g}=\SI{3.6}{\volt}$.}
+\end{minipage}
+\end{figure}
+% \begin{figure}[h]
+% \begin{minipage}{.25\textwidth}
+%   \centering
+%   \includegraphics[width=.8\linewidth]{images/1-41.png}
+%   \caption{$V_{g}=\SI{4.1}{\volt}$.}
+% \end{minipage}
+% \begin{minipage}{.25\textwidth}
+%   \centering
+%   \includegraphics[width=.8\linewidth]{images/1-46.png}
+%   \caption{$V_{g}=\SI{4.6}{\volt}$.}
+% \end{minipage}
+% % \begin{minipage}{.25\textwidth}
+% %   \centering
+% %   \includegraphics[width=.8\linewidth]{images/1-51.png}
+% %   \caption{$V_{g}=\SI{5.1}{\volt}$.}
+% % \end{minipage}
+% \end{figure}
+% \clearpage
+\par Also, it is observed that when $V_{g}$ is greater than \SI{2}{\volt},
+we start to see the behavior of the MOSFETs. When Vin is about to reach than
+\SI{2}{\volt}, which is around the  threshold voltage according to the Manufacturers data sheet,
+$I_{D}$ saturates.
+\par sdfsd.
+
 \subsection{MOSFET Temperature Effects}
-\subsection{BJT $I_{C}-V_{CE}$ Characteristics Using a Curve Tracer}
+\subsection{BJT $I_{C}$-$V_{CE}$ Characteristics Using a Curve Tracer}
 \subsection{BJT Temperature Effects}
 \section{Conclusion}
 
