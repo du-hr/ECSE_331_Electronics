@@ -32,7 +32,7 @@ Engineering, Faculty of Engineering, McGill University, H3A 0E9 Montreal, QC, Ca
   The purpose of laboratory experiment was to explore the functions
   and characteristics of MOSFETs and BJTs. In the first part of this laboratory,
   the $I$-$V$ characteristics of the MOSFET was found and drawn for different gate voltages,
-  then the transconductance gm of the circuit was found. In the second part,
+  then the transconductance $g_{m}$ of the circuit was found. In the second part,
   the behavior of the MOSFET was studied at various temperatures.
   The same experiment was also conducted on the BJT transistor.
 \end{abstract}
@@ -83,29 +83,43 @@ with the Oscilloscope. Below are some of the results.
   \caption{$V_{g}=\SI{3.6}{\volt}$.}
 \end{minipage}
 \end{figure}
-% \begin{figure}[h]
-% \begin{minipage}{.25\textwidth}
-%   \centering
-%   \includegraphics[width=.8\linewidth]{images/1-41.png}
-%   \caption{$V_{g}=\SI{4.1}{\volt}$.}
-% \end{minipage}
-% \begin{minipage}{.25\textwidth}
-%   \centering
-%   \includegraphics[width=.8\linewidth]{images/1-46.png}
-%   \caption{$V_{g}=\SI{4.6}{\volt}$.}
-% \end{minipage}
-% % \begin{minipage}{.25\textwidth}
-% %   \centering
-% %   \includegraphics[width=.8\linewidth]{images/1-51.png}
-% %   \caption{$V_{g}=\SI{5.1}{\volt}$.}
-% % \end{minipage}
-% \end{figure}
-% \clearpage
 \par Also, it is observed that when $V_{g}$ is greater than \SI{2}{\volt},
 we start to see the behavior of the MOSFETs. When Vin is about to reach than
 \SI{2}{\volt}, which is around the  threshold voltage according to the Manufacturers data sheet,
 $I_{D}$ saturates.
+\par To find the transconductance $g_{m}$, of our device the following formula:
+\begin{equation*}
+g_{m}=\frac{\Delta i_{D}}{\Delta v_{GS}}
+\end{equation*}
+\par Next, applying the circuit in Fig. \ref{fig-1}, we obtained the following results:
 \clearpage
+\begin{figure}[h]
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}{.25\textwidth}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/1-3dot1vg.png}
+  \caption{Applying \SI{3.1}{\volt} $V_{GS}$.}
+  \label{fig-vg1}
+\end{minipage}%
+\begin{minipage}{.25\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/1-3dot3vg.png}
+  \caption{Applying \SI{3.3}{\volt} $V_{GS}$.}
+  \label{fig-vg2}
+\end{minipage}
+\end{figure}
+\par From Fig. \ref{fig-vg1} and Fig.\ref{fig-vg2}, hence,
+\begin{equation*}
+  \begin{split}
+  g_{m}&=\frac{\Delta i_{D}}{\Delta v_{GS}}\\
+  &=\frac{\SI{58}{\mA}-\SI{41}{\mA}}{\SI{3.3}{\V}-\SI{3.1}{\V}}\\
+  &=0.085
+\end{split}
+\end{equation*}
+\par Equivalanet Small-signal model of MOSFET:
+
 \subsection{MOSFET Temperature Effects}
 \par The MOSFET’s $I_{D}$-$V_{DS}$ curve was measured using the circuit in Fig. \ref{fig-1}
 at different temperatures. In theory, the current conducted at a higher temperature
@@ -149,7 +163,97 @@ and free electrons, which increases its conductivity.
 \par To analyze the behavior of $I$-$V$ characteristic of the BJT, we
 built the circuit in Fig. \ref{fig-8} and plot the curve for different values
 of $V_{\text{in}}$, which is a sawtooth waveform that varies from \SIrange{1}{10}{\volt}.
+We obtained the follwoing results:
+\subsubsection{}
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        $V_{CE}$ (unit: \si{\volt}) & $V_{Y}$ (unit: \si{\volt})&  $I_{C}$ (unit: \si{\ampere})\\
+        \hline
+        $0$ & $0$ & $0$ \\
+        \hline
+        $1$ & $0$ & $0$ \\
+        \hline
+        $2$ & $0$ & $0$ \\
+        \hline
+        \vdots & \vdots & \vdots \\
+        \hline
+        $8$ & $0$ & $0$ \\
+        \hline
+        $9$ & $0$ & $0$ \\
+        \hline
+        $10$ & $0$ & $0$ \\
+        \hline
+    \end{tabular}
+\end{center}
+\par When the base voltage $V_{B}$ is below \SI{650}{\mV}, the results are somewhat similar
+to the table shown above and as shown in Fig. \ref{fig-3-2}, which is zero current flowing.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/3-2.png}
+  \caption{BJT in the switched off .}
+  \label{fig-3-2}
+\end{figure}
+\subsubsection{}
+\par When the base voltage $V_{B}$ is increased to \SI{700}{\mV}, we start to get the result
+as shown in Fig. \ref{fig-3-3}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/3-3.png}
+  \caption{Base voltage is increased to \SI{700}{\mV}.}
+  \label{fig-3-3}
+\end{figure}
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        $V_{CE}$ (unit: \si{\volt}) & $V_{Y}$ (unit: \si{\volt})&  $I_{C}$ (unit: \si{\mA})\\
+        \hline
+        $0$ & $0.5$ & $5$ \\
+        \hline
+        $1$ & $1.5$ & $15.3$ \\
+        \hline
+        $2$ & $2$ & $15.3$ \\
+        \hline
+        \vdots & \vdots & \vdots \\
+        \hline
+        $5$ & $1.61$ & $16.1$ \\
+        \hline
+        $6$ & $1.69$ & $16.9$ \\
+        \hline
+        $7$ & $1.66$ & $16.6$ \\
+        \hline
+    \end{tabular}
+\end{center}
+\par As it can be seen from the graphs and tables, at low gate voltages, the value of $I_{C}$ is very small.
+When the gate voltage is increased to around \SI{710}{\mV}, we see that the current starts to increase to around \SI{15}{\mA}.
+\subsubsection{Computing the Transconductance of BJT}
+\par Now, as required, the base voltage $V_{B}$ is set to be \SI{650}{\mV}. The result as
+shown in Fig. \ref{fig-3-4}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.35\textwidth]{images/650mV.png}
+  \caption{Base voltage is set to \SI{650}{\mV}.}
+  \label{fig-3-4}
+\end{figure}
 \clearpage
+\par From the figure, $I_{C}$ is measured to be  \SI{3}{\mA}. Next, we set base voltage $V_{B}$
+to be \SI{700}{\mV}. The measuring result is shown in Fig. \ref{fig-3-5}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/700mV.png}
+  \caption{Base voltage is set to \SI{700}{\mV}.}
+  \label{fig-3-5}
+\end{figure}
+\par From the figure, $I_{C}$ is measured to be \SI{20}{\mA}. Hence,
+\begin{equation*}
+  \begin{split}
+  g_{m}&=\frac{\Delta i_{c}}{\Delta v_{BE}}\\
+  &=\frac{\SI{20}{\mA}-\SI{3}{\mA}}{\SI{700}{\mV}-\SI{650}{\mV}}\\
+  &=0.34
+\end{split}
+\end{equation*}
+\subsubsection{Small signal model of BJT at low frequency}
+\par ???
 \subsection{BJT Temperature Effects}
 \par As seen in subsection \ref{sec-3}, as we increase the temperature, the
 current for a certain drain voltage increases. In theory, as
