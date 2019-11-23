@@ -87,14 +87,12 @@ with the Oscilloscope. Below are some of the results.
 we start to see the behavior of the MOSFETs. When Vin is about to reach than
 \SI{2}{\volt}, which is around the  threshold voltage according to the Manufacturers data sheet,
 $I_{D}$ saturates.
+\clearpage
 \par To find the transconductance $g_{m}$, of our device the following formula:
 \begin{equation*}
 g_{m}=\frac{\Delta i_{D}}{\Delta v_{GS}}
 \end{equation*}
 \par Next, applying the circuit in Fig. \ref{fig-1}, we obtained the following results:
-\clearpage
-\begin{figure}[h]
-\end{figure}
 \begin{figure}[h]
 \centering
 \begin{minipage}{.25\textwidth}
@@ -115,11 +113,20 @@ g_{m}=\frac{\Delta i_{D}}{\Delta v_{GS}}
   \begin{split}
   g_{m}&=\frac{\Delta i_{D}}{\Delta v_{GS}}\\
   &=\frac{\SI{58}{\mA}-\SI{41}{\mA}}{\SI{3.3}{\V}-\SI{3.1}{\V}}\\
-  &=0.085
+  &=\SI{0.085}{\siemens}
 \end{split}
 \end{equation*}
-\par Equivalanet Small-signal model of MOSFET:
-
+\par The equivalent small-signal model of MOSFET is presented in Fig. \ref{scan-1}:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/scan-1.jpg}
+  \caption{Equivalent small-signal model of MOSFET for low-frequency operation.}
+  \label{scan-1}
+\end{figure}
+\par The hybrid-pi model was used in the above model, where we define
+\begin{equation}
+  r_{0}=\frac{V_{A}}{I_{D}}
+\end{equation}
 \subsection{MOSFET Temperature Effects}
 \par The MOSFET’s $I_{D}$-$V_{DS}$ curve was measured using the circuit in Fig. \ref{fig-1}
 at different temperatures. In theory, the current conducted at a higher temperature
@@ -127,24 +134,24 @@ a fixed $V_{DS}$ will be larger than that at a lower temperature. In the lab, th
 following results are obtained at room temperature.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/2-1.png}
+  \includegraphics[width=0.35\textwidth]{images/2-1.png}
   \caption{MOSFET’s $I_{D}$-$V_{y}$ at room temperature: \SI{31}{\celsius}.}
   \label{fig-5}
 \end{figure}
-\par Using the circuit in  Fig. \ref{fig-1} with the MOSFET being at \SI{31}{\celsius},
-we obtained the following data as written in table?.
+\newpage
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/2-2.png}
+  \includegraphics[width=0.33\textwidth]{images/2-2.png}
   \caption{MOSFET’s $I_{D}$-$V_{y}$ at \SI{-18}{\celsius}.}
   \label{fig-6}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/2-3.png}
+  \includegraphics[width=0.33\textwidth]{images/2-3.png}
   \caption{MOSFET’s $I_{D}$-$V_{y}$ at \SI{47}{\celsius}.}
   \label{fig-7}
 \end{figure}
+\clearpage
 \par By comparing the three graphs, we see that for \SI{31}{\celsius} and
 \SI{47}{\celsius}, the values and the graph are very similar. For
 \SI{-18}{\celsius}, $I_{D}$ is smaller at the same $V_{DS}$. It could be
@@ -152,7 +159,6 @@ explained by the fact that at lower temperatures, there are less
 free electrons and holes available to conduct current. Similarly,
 as the temperature increases, there would be more thermally generated holes
 and free electrons, which increases its conductivity.
-\clearpage
 \subsection{BJT $I_{C}$-$V_{CE}$ Characteristics Using a Curve Tracer}\label{sec-3}
 \begin{figure}[h]
   \centering
@@ -190,8 +196,8 @@ We obtained the follwoing results:
 to the table shown above and as shown in Fig. \ref{fig-3-2}, which is zero current flowing.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/3-2.png}
-  \caption{BJT in the switched off .}
+  \includegraphics[width=0.3\textwidth]{images/3-2.png}
+  \caption{BJT is in switched off mode.}
   \label{fig-3-2}
 \end{figure}
 \subsubsection{}
@@ -199,7 +205,7 @@ to the table shown above and as shown in Fig. \ref{fig-3-2}, which is zero curre
 as shown in Fig. \ref{fig-3-3}.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/3-3.png}
+  \includegraphics[width=0.3\textwidth]{images/3-3.png}
   \caption{Base voltage is increased to \SI{700}{\mV}.}
   \label{fig-3-3}
 \end{figure}
@@ -231,12 +237,12 @@ When the gate voltage is increased to around \SI{710}{\mV}, we see that the curr
 shown in Fig. \ref{fig-3-4}.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.35\textwidth]{images/650mV.png}
+  \includegraphics[width=0.45\textwidth]{images/650mV.png}
   \caption{Base voltage is set to \SI{650}{\mV}.}
   \label{fig-3-4}
 \end{figure}
 \clearpage
-\par From the figure, $I_{C}$ is measured to be  \SI{3}{\mA}. Next, we set base voltage $V_{B}$
+\par From Fig. \ref{fig-3-4}, $I_{C}$ is measured to be  \SI{3}{\mA}. Next, we set base voltage $V_{B}$
 to be \SI{700}{\mV}. The measuring result is shown in Fig. \ref{fig-3-5}.
 \begin{figure}[h]
   \centering
@@ -244,16 +250,30 @@ to be \SI{700}{\mV}. The measuring result is shown in Fig. \ref{fig-3-5}.
   \caption{Base voltage is set to \SI{700}{\mV}.}
   \label{fig-3-5}
 \end{figure}
-\par From the figure, $I_{C}$ is measured to be \SI{20}{\mA}. Hence,
+\par From Fig. \ref{fig-3-5}, $I_{C}$ is measured to be \SI{20}{\mA}. Hence,
 \begin{equation*}
   \begin{split}
   g_{m}&=\frac{\Delta i_{c}}{\Delta v_{BE}}\\
   &=\frac{\SI{20}{\mA}-\SI{3}{\mA}}{\SI{700}{\mV}-\SI{650}{\mV}}\\
-  &=0.34
+  &=\SI{0.34}{\siemens}
 \end{split}
 \end{equation*}
 \subsubsection{Small signal model of BJT at low frequency}
-\par ???
+\par The equivalent small-signal model of BJT is presented in Fig. \ref{scan-2}:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/scan-2.jpg}
+  \caption{Equivalent small-signal model of BJT.}
+  \label{scan-2}
+\end{figure}
+\par The pi model was used in the above model since the emitter is
+connected to the ground.
+\begin{equation*}
+  \begin{split}
+    r_{0}&=\frac{V_{A}}{I_{c}}\\
+    r_{\pi}&=\frac{V_{T}}{I_{B}}
+  \end{split}
+\end{equation*}
 \subsection{BJT Temperature Effects}
 \par As seen in subsection \ref{sec-3}, as we increase the temperature, the
 current for a certain drain voltage increases. In theory, as
@@ -262,13 +282,13 @@ electrons to carry the charges, thus the $I_{C}$-$V_{CE}$ curve would
 shift up as the temperature increases. We obtained the following results:
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/4-1.png}
+  \includegraphics[width=0.35\textwidth]{images/4-1.png}
   \caption{BJT $V_{DS}$-$V_{Y}$ at \SI{22}{\celsius}.}
   \label{fig-9}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.45\textwidth]{images/4-2.png}
+  \includegraphics[width=0.35\textwidth]{images/4-2.png}
   \caption{BJT $V_{DS}$-$V_{Y}$ at \SI{45}{\celsius}.}
   \label{fig-10}
 \end{figure}
