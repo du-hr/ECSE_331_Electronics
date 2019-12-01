@@ -44,9 +44,48 @@ Lab 4 using the NI Elvis-II test instrument. In the laboratory, an amplifier wit
 \subsection{BJT Amplifier Circuit Design}
 \subsection{BJT Amplifier Performance Testing}
 \subsection{Temperature Effects of BJT Amplifier}
-
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/27degree.png}
+  \caption{$V_{in}$ and $V_{out}$ of the circuit at room temperature (\SI{27}{\celsius}).}
+  \label{fig-3-1}
+\end{figure}
+As seen in Fig. \ref{fig-3-1}, the gain of the BJT amplifier at at room temperature (\SI{27}{\celsius}) is
+\begin{equation*}
+  \begin{split}
+    G&=\frac{V_{out}}{V_{in}}\\
+    &=\frac{\SI{4.864}{\volt}}{\SI{83.88}{\milli\volt}}\\
+    &=58.0 \si{\volt}/\si{\volt}
+  \end{split}
+\end{equation*}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/63degree.png}
+  \caption{$V_{in}$ and $V_{out}$ of the circuit at \SI{63}{\celsius}.}
+  \label{fig-3-2}
+\end{figure}
+When the temperature is increased to \SI{63}{\celsius}, as seen in Fig. \ref{fig-3-2}, we have the gain
+\begin{equation*}
+  \begin{split}
+    G&=\frac{V_{out}}{V_{in}}\\
+    &=\frac{\SI{3.690}{\volt}}{\SI{100.66}{\milli\volt}}\\
+    &=36.9 \si{\volt}/\si{\volt}
+  \end{split}
+\end{equation*}
+Thus, it is observed that the gain of the BJT amplifier decreases as its temperature increases.
+Similarly, we conducted similar operations to observe its temperature characteristics when the
+circuit is brought down from room temperature.
+\begin{figure}[h]
+  \includegraphics[width=0.45\textwidth]{images/-10degree.png}
+  \caption{BJT amplifier at \SI{-10}{\celsius}.}
+  \label{fig-3-3}%
+\end{figure}
+Similarly, as given in Fig. \ref{fig-3-3}, we could calculate that
+the gain of the amplifier at \SI{-10}{\celsius} is 55.64 \si{\volt}/\si{\volt}. It
+can be observed that the gain has a small decrease as the temperature is brought down,
+which is surprisingly not pertaining with the theory.
 
 \section{Conclusion}
-\par To conclude, this lab was very helpful for using a BJT transistor. We built an amplifier that produced a gain of around 50 \si{\volt}/\si{\volt}for a frequency range of over \SI{100}{\kilo\hertz}.
-The behavior of the amplifier was tested at various temperatures, the gain was found using the Bode plot at room temperature (\SI{27}{\celsius}), \SIlist{-10;-19;63}{\celsius}. The differences in the gain were very small, but overall satisfying. Our gain increased slightly as we decreased the temperature of the BJT. This could have been due to the fact that, at lower temperature, there are less mobile charge carriers.
+\par To conclude, this lab was very helpful for using a BJT transistor. We built an amplifier that produced a gain of around 55 \si{\volt}/\si{\volt}for a frequency range of over \SI{100}{\kilo\hertz}.
+The behavior of the amplifier was tested at various temperatures, the gain was found using the Bode plot at room temperature (\SI{27}{\celsius}), \SIlist{-10;63}{\celsius}. The differences in the gain were very small, but overall satisfying. Our gain increased slightly as we decreased the temperature of the BJT. This could have been due to the fact that, at lower temperature, there are less mobile charge carriers.
 \end{document}
