@@ -8,6 +8,7 @@
 \usepackage{url}
 \usepackage{pdfpages}
 \usepackage{siunitx}
+\usepackage{float}
 
 \begin{document}
 \begin{titlepage}
@@ -41,10 +42,48 @@ Lab 4 using the NI Elvis-II test instrument. In the laboratory, an amplifier wit
 
 \IEEEPARstart {T}{he} goal of this laboratory was to build, test, and explore the behavior of the BJT amplifier using the NI Elvis-II test instrument. The performance of the amplifier was tested under the required constrains of bandwidth and RMS level. The effect of temperature on the operation of the transistors was also tested and found.
 \section{Experiments Procedures and Result}
-\subsection{BJT Amplifier Circuit Design}
-\subsection{BJT Amplifier Performance Testing}
-\subsection{Temperature Effects of BJT Amplifier}
+\subsection{BJT Amplifier Circuit Design} \label{1.1}
 \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/circuit.png}
+  \caption{Design of BJT amplifier.}
+  \label{fig-1-1}
+\end{figure}
+\par The BJT amplifier design as shown in Fig. \ref{fig-1-1} was provided in the
+sample circuit, where $R_{1}$ to $R_{6}$ are \SIlist{3;1.3;66.5;33;10;0.024}{\kilo\ohm}
+respectively, and all three capacitors are \SI{47}{\micro\F}. Ideally, the gain should equal to $\frac{R_{1} || R_{5}}{R_{6}}$ if the capacitor was large enough; however, when we constructed the given circuit, the gain we found was only around 38 \si{\volt}/\si{\volt}. This was because the capacitor was not ideal.
+As a result, we wanted to increase the gain. There are three ways to increase the gain:
+to increase $R_{1}$, to increase $R_{5}$, or to decrease $R_{6}$. However, during the experiment, we found that if we were to increase $R_{1}$ slightly, the output signal we have would have a cutoff region on its sine wave.
+Therefore, we decided to increase $R_{5}$ to \SI{1}{\Mohm} and decrease $R_{6}$ to \SI{14}{\ohm}.
+
+\subsection{BJT Amplifier Performance Testing}
+\par After setting up the circuit as shown in  Fig. \ref{fig-1-1} with the element we have mentioned in section \ref{1.1}, we modified our input as $V_{pp} =$ \SI{0.66}{\volt}; \SI{1}{\kilo\hertz} sine wave; \SI{0}{\volt} offset. The measured result from the two oscilloscope shows (in Fig. \ref{fig-2-1} (where black is the input signal, and grey line is the output signal) that this circuit has a voltage gain of 47.86 \si{\volt}/\si{\volt}, which is in the desired range.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/2-1.png}
+  \caption{Measured Output voltage and input voltage at room temperature (\SI{27}{\celsius}) with input voltage at \SI{1}{\kilo\hertz}}
+  \label{fig-2-1}
+\end{figure}
+\clearpage
+\par Next, without modifying any circuit elements, we changed our the frequency of our
+input voltage to 11 KHz. As shown in Fig. \ref{fig-2-2}, the gain is obtained as 55 \si{\volt}/\si{\volt}, which is
+acceptably desirable.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{images/2-2.png}
+  \caption{Measured Output voltage and input voltage at room temperature (\SI{27}{\celsius}) with input voltage at \SI{11}{\kilo\hertz}}
+\label{fig-2-2}
+\end{figure}
+\par Finally, the frequency and of the input was inverted back to \SI{1}{\kilo\hertz} but added with \SI{1}{\volt} offset.
+The measured gain under such circumstane is 45 \si{\volt}/\si{\volt} as shown below in Fig. \ref{fig-2-3}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{images/2-3.png}
+  \caption{Measured Output voltage and input voltage at room temperature (\SI{27}{\celsius}) with input voltage at \SI{11}{\kilo\hertz}}
+\label{fig-2-3}
+\end{figure}
+\subsection{Temperature Effects of BJT Amplifier}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.45\textwidth]{images/27degree.png}
   \caption{$V_{in}$ and $V_{out}$ of the circuit at room temperature (\SI{27}{\celsius}).}
